@@ -6,7 +6,7 @@ const Home = () => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    gameService.getAll().then((res) => setGames(res));
+    gameService.getNewReleases().then((res) => setGames(res));
   }, []);
   console.log(games);
   return (
